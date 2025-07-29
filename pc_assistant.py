@@ -49,12 +49,12 @@ class User_Interface :
         self.root.bind('<Return>', lambda event: self.handle_command())
 
     # Temporary intent handler stub function
+    # NOTE: This part should be edited ---> results from LLM or System are shown here
     # وظيفة مؤقتة فقط لعرض الاستجابة
     def handle_command(self):
         command = self.input_box.get()  # الحصول على الأمر من المستخدم
 
         # نعرضه في خانة الـ output
-        # This part should be edited ---> results from LLM or System are shown here 
         self.output_area.config(state="normal")
         self.output_area.delete(1.0, "end")
         self.output_area.insert("end", f"You said: {command}\n(This will be processed soon)")
